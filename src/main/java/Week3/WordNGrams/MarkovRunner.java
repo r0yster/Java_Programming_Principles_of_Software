@@ -1,4 +1,4 @@
-
+package Week3.WordNGrams;
 /**
  * Write a description of class MarkovRunner here.
  * 
@@ -32,7 +32,7 @@ public class MarkovRunner {
         FileResource fr = new FileResource(); 
         String st = fr.asString(); 
         st = st.replace('\n', ' '); 
-        MarkovWordOne markovWord = new MarkovWordOne(); 
+        MarkovWordOne markovWord = new MarkovWordOne();
         runModel(markovWord, st, 200); 
     } 
 
@@ -50,12 +50,4 @@ public class MarkovRunner {
         } 
         System.out.println("\n----------------------------------");
     }
-
-    public void testGetFollows(){
-        String test = "this is just a test yes this is a simple test";
-        MarkovWordOne markovWord = new markovWordOne();
-        runModel(markovWord, words, 200);
-    }
-
-
 }

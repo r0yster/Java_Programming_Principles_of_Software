@@ -1,4 +1,4 @@
-
+package Week3.WordNGrams;
 /**
  * Write a description of class MarkovWordOne here.
  * 
