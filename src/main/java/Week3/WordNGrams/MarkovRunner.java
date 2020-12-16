@@ -9,7 +9,7 @@ package Week3.WordNGrams;
 import edu.duke.*;
 
 public class MarkovRunner {
-    public void runModel(IMarkovModel markov, String text, int size){ 
+    public void runModel(IMarkovModel markov, String text, int size){
         markov.setTraining(text); 
         System.out.println("running with " + markov); 
         for(int k=0; k < 3; k++){ 
@@ -33,8 +33,16 @@ public class MarkovRunner {
         String st = fr.asString(); 
         st = st.replace('\n', ' '); 
         MarkovWordOne markovWord = new MarkovWordOne();
-        runModel(markovWord, st, 200); 
-    } 
+        runModel(markovWord, st, 120, 175);
+    }
+
+    public void runMarkovTwo(){
+        FileResource fr = new FileResource();
+        String st = fr.asString();
+        st = st.replace('\n', ' ');
+        MarkovWordTwo markovWordTwo = new MarkovWordTwo();
+        runModel(markovWordTwo, st, 120, 549);
+    }
 
     private void printOut(String s){
         String[] words = s.split("\\s+");
@@ -50,4 +58,6 @@ public class MarkovRunner {
         } 
         System.out.println("\n----------------------------------");
     }
+
+
 }

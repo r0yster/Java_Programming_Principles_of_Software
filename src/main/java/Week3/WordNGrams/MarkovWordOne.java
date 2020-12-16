@@ -30,7 +30,6 @@ public class MarkovWordOne implements IMarkovModel {
 		String key = myText[index];
 		sb.append(key);
 		sb.append(" ");
-		System.out.println("Key being searched : "+key);
 		for(int k=0; k < numWords-1; k++){
 		    ArrayList<String> follows = getFollows(key);
 		    if (follows.size() == 0) {
@@ -38,12 +37,10 @@ public class MarkovWordOne implements IMarkovModel {
 		    }
 			index = myRandom.nextInt(follows.size());
 			String next = follows.get(index);
-			System.out.print("Word following key : "+next);
 			sb.append(next);
 			sb.append(" ");
 			key = next;
 		}
-		
 		return sb.toString().trim();
 	}
 
